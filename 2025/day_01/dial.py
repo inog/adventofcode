@@ -18,6 +18,16 @@ def count_0_in_sequence(parameters):
             count_0 += 1
     return count_0
 
+def count_all_0_in_sequence(parameters):
+    position = START_POSITION
+    count_0 = 0
+    for direction, value in parameters:
+     position = rotate_dial(position, direction, value)
+     if position == 0:
+        count_0 += 1
+    return count_0
+
+
 def read_parameters_from_file(filename):
     parameters = []
     with open(filename, 'r') as file:

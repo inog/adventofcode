@@ -1,6 +1,6 @@
 import unittest
 
-from dial import rotate_dial, count_0_in_sequence
+from dial import rotate_dial, count_0_in_sequence, count_all_0_in_sequence
 
 
 class TestDialRotation(unittest.TestCase):
@@ -34,6 +34,9 @@ class TestDialRotation(unittest.TestCase):
 
     def test_sequence_and_count_0(self):
         self.assertEqual(count_0_in_sequence(self.parameters), 3)
+
+    def test_sequence_and_count_all_0(self):
+        self.assertEqual(count_all_0_in_sequence(self.parameters), 6)
 
 if __name__ == '__main__':
     unittest.main()
